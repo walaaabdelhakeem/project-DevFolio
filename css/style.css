@@ -308,16 +308,25 @@ button[aria-expanded="true"]
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.2) inset;
   background-color: #0062d3;
 }
+
 @media (max-width: 1024px) {
   .bg-image {
     background-attachment: scroll;
   }
 }
 @media all and (max-width: 992px) {
+  
   .sub .sub {
-    right: 30%;
-    left: 100%;
-    top: 20%;
+    left: 0%;
+    top: 20%; 
+    display: none;
+    position:static;
+
+  }
+  .sub .sub-item:hover .sub
+  {
+   
+    display: block;
   }
   .navbar-nav {
     background-color: #fff;
@@ -336,7 +345,7 @@ button[aria-expanded="true"]
   .navbar-nav .nav-link {
     color: black;
   }
-  .navbar-nav .nav-item:hover a ,.nav-item .active {
+  .navbar-nav .nav-item:hover >a ,.nav-item .active {
     color: #298eff;
   }
   [class*=" arrow"]::before {
